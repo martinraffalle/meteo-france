@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  margin-top: 80px; /* évite que la barre cache le contenu */
+  padding: 0;
+}
+
+/* BARRE DU HAUT */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 20px;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* CONTENEUR GLOBAL */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.compte i{
+  width: 20px;
+}
+
+.compte button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #868686;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease; /* animation fluide */
+}
+.compte {
+  margin-left: auto;
+}
+
+.compte button:hover {
+  background-color: #d3d3d3; /* couleur au choix */
+  transform: scale(1.1); /* effet "avance vers moi" */
+  cursor: pointer;
+}
+
+/* LOGO */
+.logo {
+  width: 100px;   /* stable */
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* BARRE DE RECHERCHE */
+.search-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* INPUT */
+.search-container input {
+  width: 100%;
+  max-width: 320px;
+
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* LOUPE */
+.search-container button {
+  position: absolute;
+  right: calc(50% - 160px + 10px); /* aligné avec 320px */
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.bande {
+  height: 80px;
+  background-color: #007BFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.bande a {
+  color: #ccc;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  display: flex;
+  gap: 6px;
+  white-space: nonwrap;
+  transition: all 0.3s ease; /* animation fluide */
+}
+
+.bande a:hover {
+  color: rgb(12, 1, 114);
+  text-decoration: underline;
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+
+h1 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .search-container {
+    display: flex; /* on cache pour gagner de la place */
+    width: 100%;
+    margin-top: 10px; 
+  }
+
+  .search-container input{
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 45px 12px 15px;
+    border-radius: 30px;
+    border: none;
+    background:  #f1f1f1;
+
+  }
+
+  .search-container button{
+    right: 15px;
+    font-size: 18px;
+  
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .bande {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #007BFF;
+    padding: 10px;
+  }
+
+  .bande a {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .bande.active {
+    display: flex;
+  }
+
+  /* bouton hamburger */
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+/* menu latéral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* caché */
+  width: 250px;
+  height: 100%;
+
+  background-color: #007BFF;
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transition: left 0.3s ease;
+  z-index: 2000;
+}
+
+/* quand ouvert */
+.side-menu.active {
+  left: 0;
+}
+
+/* liens */
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+/* overlay sombre */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.4);
+  display: none;
+
+  z-index: 1500;
+}
+
+.overlay.active {
+  display: block;
+}
+
+  .side-menu {
+    display: flex;
+  }
+
+.side-menu a{
+    color: #ccc;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.side-menu a:hover{
+    color: rgb(12, 1, 114);
+    opacity: 0.7;
+    transform: scale(1.1)
+
+
+}
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo/Accueil</title>
+  <link rel="stylesheet" href="main_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+
+  <a href="main.html">
+  <img src="ami7l-logo-meteo-460x300.png" alt="logo" class="logo">
+  </a>
+
+  <form class="search-container">
+    <input type="text" placeholder="Chercher une ville...">
+    <button type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+
+  <form class="compte">
+    <a href="compte.html">
+    <button type="button">
+      <i class="fa-solid fa-user"></i>
+    </button>
+    </a>
+  </form>
+</header>
+
+<div class="bande">
+    <nav>
+      <ul>
+        <li class="menu">
+          <a href="actualité.html">Actualité
+          <i class="fa-solid fa-newspaper"></i>
+
+          <ul class="submenu">
+            <li><a href="saison.html">saison</a></li>
+            <li><a href="test.html">XXX</a></li>
+            <li><a href="test.html">XXX</a></li>
+            <li><a href="test.html">XXX</a></li>
+          </ul>
+
+        </li>
+      </ul>
+    </nav>
+  </a>
+  <a href="test.html">Méteo Marine
+    <i class="fa-solid fa-water"></i>
+  </a>
+  <a href="test.html">Météo Montagne
+    <i class="fa-solid fa-mountain"></i>
+  </a>
+  <a href="test.html">Météo Plage
+    <i class="fa-solid fa-umbrella-beach"></i>
+  </a>
+  <a href="info.html">Informations
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </a>
+</div>
+
+<div class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="side-menu" id="sideMenu">
+  <a href="main.html">
+    <i class="fa-solid fa-house"></i>
+  </a>
+  <a href="actualité.html">Actualité
+    <i class="fa-solid fa-newspaper"></i>
+  </a>
+  <a href="test.html">Météo Marine
+    <i class="fa-solid fa-water"></i>
+  </a>
+  <a href="test.html">Météo Montagne
+    <i class="fa-solid fa-mountain"></i>
+  </a>
+  <a href="test.html">Météo Plage
+    <i class="fa-solid fa-umbrella-beach"></i>
+  </a>
+  <a href="info.html">Informations
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </a>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<h1>Bienvenue sur Météo</h1>
+
+
+<script>
+const btn = document.querySelector('.menu-toggle');
+const menu = document.getElementById('sideMenu');
+const overlay = document.getElementById('overlay');
+
+btn.onclick = () => {
+  menu.classList.add('active');
+  overlay.classList.add('active');
+};
+
+overlay.onclick = () => {
+  menu.classList.remove('active');
+  overlay.classList.remove('active');
+};
+</script>
+
+<h2>‎ </h2>
+
+<h3>Température France en ce moment</h3>
+
+
+
+</body>
+</html>
