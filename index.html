@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo/Accueil</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+
+  <div class="top-strip"></div>
+
+  <a href="index.html">
+  <img src="src/ami7l-logo-meteo-460x300.png" alt="logo" class="logo">
+  </a>
+
+  <form class="search-container">
+    <input type="text" placeholder="Chercher une ville...">
+    <button type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+
+  <div class="compte">
+      <a href="pages/compte.html">
+        <i class="fa-solid fa-user"></i>
+      </a>
+  </div>
+
+  <div class="bande">
+    <nav>
+      <ul>
+        <li class="menu">
+          <a href="pages/actualite.html">Actualité
+          <i class="fa-solid fa-newspaper"></i>
+
+          <ul class="submenu">
+            <li><a href="saison.html">saison</a></li>
+            <li><a href="pages/test.html">XXX</a></li>
+            <li><a href="pages/test.html">XXX</a></li>
+            <li><a href="pages/test.html">XXX</a></li>
+          </ul>
+
+        </li>
+      </ul>
+    </nav>
+  </a>
+  <a href="pages/test.html">Méteo Marine
+    <i class="fa-solid fa-water"></i>
+  </a>
+  <a href="pages/test.html">Météo Montagne
+    <i class="fa-solid fa-mountain"></i>
+  </a>
+  <a href="pages/test.html">Météo Plage
+    <i class="fa-solid fa-umbrella-beach"></i>
+  </a>
+  <a href="pages/info.html">Informations
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </a>
+</div>
+</header>
+<div class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="side-menu" id="sideMenu">
+  <a href="index.html">
+    <i class="fa-solid fa-house"></i>
+  </a>
+  <a href="pages/actualite.html">Actualité
+    <i class="fa-solid fa-newspaper"></i>
+  </a>
+  <a href="pages/test.html">Météo Marine
+    <i class="fa-solid fa-water"></i>
+  </a>
+  <a href="pages/test.html">Météo Montagne
+    <i class="fa-solid fa-mountain"></i>
+  </a>
+  <a href="pages/test.html">Météo Plage
+    <i class="fa-solid fa-umbrella-beach"></i>
+  </a>
+  <a href="pages/info.html">Informations
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </a>
+</div>
+
+
+
+
+<div class="overlay" id="overlay"></div>
+<h1 class="Bienvenue">Bienvenue sur Météo</h1>
+
+
+<br>
+
+<h3 class="Sous-titre">Température France en ce moment</h3>
+
+  <div class="contour">
+    
+  <div class="espace2"></div>
+
+  <div class="contour">
+
+  <div class="meteo-box">
+    <div>Mercredi 29</div>
+
+    <button class="matin">Matin</button>
+    <button class="aprés-midi">Après-midi</button>
+    <button class="soirée">Soirée</button>
+    <button class="nuit">Nuit</button>
+    <button class="temps_reel">Temps réel</button>
+
+    <div>Jeudi 30</div>
+  </div>
+
+  <div id="carte">
+    <div id="map"></div>
+    <div id="legend">
+      <div>Température (°C)</div>
+    </div>
+    <div id="info-panel">
+      <div id="info-name"></div>
+      <div id="info-temp"></div>
+    </div>
+    <div id="loading-overlay">
+      <div id="loading">Chargement des températures en temps réel...</div>
+      <div id="loading-bar">
+        <div id="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="espace"></div>
+
+
+
+<div class="informations">
+    <div class="grid1">
+
+        <a href="../pages/actualite.html">
+            <img src="../src/sean-mcauliffe-vmvlzjz1lhg-unsplash_64941cd709666.jpg" alt="image1" class="image1">
+        </a>
+
+        <a class="texte1" href="../pages/actualite.html">
+            les orages reviennent ? (voir l'article)
+        </a>
+
+    </div>
+
+    <div class="grid2">
+
+        <a href="../pages/actualite.html">
+            <img src="../src/istockphoto-2170723132-612x612.jpg" alt="image2" class="image2">
+        </a>
+
+        <a class="texte2" href="../pages/actualite.html">
+           Grêle massive de la taille d'une balle de golf. (voir l'article) 
+        </a>
+
+    </div>
+</div>
+
+<div class="blanc">
+  <p>
+  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+  Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+  </p>
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+  <a href="terms.html">Terms</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="contact.html">Contact</a>
+  <a href="information-personnel">Information-personnel</a>
+  <a href="about.html">A propos</a>
+  <a href=""><i class="fa-regular fa-copyright"></i>2026</a>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script/carte.js"></script>
+
+
+</body>
+</html>
